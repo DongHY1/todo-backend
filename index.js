@@ -16,5 +16,5 @@ app.get('/todos', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('5001 is listen!');
+  console.log(`${port} is listen`);
 });
