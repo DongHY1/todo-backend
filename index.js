@@ -37,7 +37,27 @@ app.get('/todos/:id', async (req, res) => {
     console.error(error.message);
   }
 });
-
+// 改一个
+app.put('/todos/:id',async (req,res)=>{
+  try {
+    const { id } = req.params;
+    const {description} = req.body
+    const putTodo = await pool.query('UPDATE todo SET description = $1 WHERE id = $2 RETURNING *', [description,id]);
+    res.json(putTodo.rows[0]);
+  } catch (error) {
+    console.error(error.message)
+  }
+})
+// 删除一个
+app.delete('/todos/:id',async (req,res)=>{
+  try {
+    const { id } = req.params;
+    const deleteTodo = await pool.query('DELETE FROM todo WHERE id = $1', [id]);
+    res.json('Nice Delete!');
+  } catch (error) {
+    console.error(error.message)
+  }
+})
 app.listen(port, () => {
   console.log(`${port} is listen`);
 });

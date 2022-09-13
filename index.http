@@ -1,5 +1,5 @@
 ### 获取所有todo
-GET http://localhost:5001/todos/
+GET http://localhost:5001/todos
 
 ### 新增一个todo
 POST http://localhost:5001/todos
@@ -10,8 +10,15 @@ content-type: application/json
 }
 
 ### 查询一个todo
-GET http://localhost:5001/todos/2
+GET http://localhost:5001/todos/3
 
 ### 修改一个todo
-PUT http://localhost:5001/todos/2
+PUT http://localhost:5001/todos/4
+content-type: application/json
 
+{
+    "description": "Eat Some Humberge"
+}
+
+### 删除一个todo
+DELETE http://localhost:5001/todos/4
