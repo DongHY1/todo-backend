@@ -9,3 +9,9 @@ content-type: application/json
     "description": "Eat Some Foods"
 }
 
+### 查询一个todo
+GET http://localhost:5001/todos/2
+
+### 修改一个todo
+PUT http://localhost:5001/todos/2
+
