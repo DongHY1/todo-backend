@@ -1,1 +1,11 @@
+### 获取所有todo
 GET http://localhost:5001/todos/
+
+### 新增一个todo
+POST http://localhost:5001/todos
+content-type: application/json
+
+{
+    "description": "Eat Some Foods"
+}
+
