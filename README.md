@@ -1,3 +1,4 @@
+# TODOLIST BACKEND
 + pnpm install
 + create your own db.js like 
 ```
@@ -13,4 +14,3 @@ module.exports = pool;
 ```
 + pnpm run dev
 
-Enjoy!
